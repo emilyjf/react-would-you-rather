@@ -73,8 +73,8 @@ const PrivateRoute = ({component: Component, ...rest}) => {
                     
                 return typeof authedUser === 'string' &&
                     authedUser.length > 0 ? (
-                    <Component {...props} />
-                ) : (
+                        <Component {...props} />
+                    ) : (
                     <Redirect
                         to={{
                             pathname: '/login',
