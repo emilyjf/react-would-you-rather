@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
 import { getArrayFromObj } from '../utils'
+import { isAuthedUsersAnswer } from '../utils'
 
 export default class OptionStats extends Component {
     render() {
         const { option, users } = this.props
 
-        const totalNumPeople = getArrayFromObj(users).length
+
+//need to divide the number of votes for an option by the number of votes for that question
+        const totalNumVotes = getArrayFromObj(users).length
+//        const totalNumVotes = getArrayFromObj(users.answers).length
         const numOptionVotes = option.votes.length
 
-        const percentage = Math.floor((100 * numOptionVotes) / totalNumPeople)
+//        const percentage = Math.floor((100 * numOptionVotes) / totalNumPeople)
+         const percentage = Math.floor((numOptionVotes / totalNumVotes) * 100)
 
         return (
             <ul className="pl-0">
