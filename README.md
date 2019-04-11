@@ -56,9 +56,9 @@ Each polling question has a link to the details of that poll. The details of eac
 
 For answered polls, each of the ptions incluldes the following:
 
--text of the option
--number of people who voted for that option
--percentage of people who voted for that option
+-text of the option;
+-number of people who voted for that option;
+-percentage of people who voted for that option;
 
 The option selected by the logged-in user is clearly marked.
 
@@ -70,10 +70,10 @@ The form for posting new polling questions is available at the /add route. The a
 
 The application has a leaderboard that’s available at the /leaderboard route. Each entry on the leaderboard includes the following:
 
--user’s name
--user’s avatar
--number of questions the user asked
--nNumber of questions the user answered
+-user’s name;
+-user’s avatar;
+-number of questions the user asked;
+-number of questions the user answered;
 
 Users are ordered in descending order based on the sum of the number of questions they’ve asked and the number of questions they’ve answered. The more questions a user asks and answers, the higher up they move.
 
